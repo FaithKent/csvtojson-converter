@@ -1,4 +1,4 @@
-//const converterTool = require('convtojson')
+
 const converterTool = require('csvtojson')
 const fileToConvert = 'customer-data.csv'
 const fs = require('fs')
@@ -15,7 +15,7 @@ converterTool()
 
     })
     .on('done', (error) => {
-        console.log('end', arrayOfObjects)
+        // console.log('end', arrayOfObjects)
 
 		fs.writeFileSync(fileToOutput, JSON.stringify(arrayOfObjects, null, 2))
 
